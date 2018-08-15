@@ -1,0 +1,47 @@
+<html lang="zhcn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jquery-ui.css">
+    <!-- <link rel="stylesheet" href=""> -->
+    <script src="jquery.js"></script>
+    <!-- 写在jquery后面 -->
+    <script src="jquery-ui.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+
+    <div class="task-list" id="pending">
+        <h3>待处理</h3>
+    </div>
+    <div class="task-list" id="inProgress">
+        <h3>进行中</h3>
+    </div>
+    <div class="task-list" id="completed">
+        <h3>已完成</h3>
+    </div>
+
+    <div class="task-list">
+        <h3>添加项目</h3>
+        <form action="" id="todo-form">
+            <input type="text" class="addTitle" placeholder="标题">
+            <textarea class="addDescription" placeholder="描述"></textarea>
+            <input type="text" placeholder="截止日期（月/日/年）" id="datePicker" class="addDate">
+            <input type="button" class="btn btn-primary" value="添加项目" id="addItem">
+        </form>
+        <input type="button" id="clear-all" value="清空全部项目">
+        <div id="delete-div" class="hidden">拖动到这里删除</div>
+    </div>
+</body>
+
+
+<script>
+    $(document).ready(function(){
+        var myTodoList = new MyTodoList()
+    });
+</script>
+
+</html>
